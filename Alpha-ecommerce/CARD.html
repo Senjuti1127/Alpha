@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>ALPHA</title>
+    <link rel="icon" href="">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 0 solid #e2e8f0; 
+        }
+        img{
+            margin: 10% 18% 18% 18%;
+        }
+        body
+        {
+            background-color: black;
+        }
+        
+        .cont
+        {
+            display: flex;
+            justify-content: space-around;
+            margin: auto 0px;
+            top: 200px;
+            position: relative;
+        }
+        .card1
+        {
+            height:400px;
+            width: 300px;
+            overflow: hidden;
+            transition: 0.5s;
+            border-radius: 20px;
+            opacity: 1;
+            background-color: rgb(20, 19, 19);
+        }
+        .card1.img{
+            padding-left: 50%;
+        }
+        .cont .text
+        {
+            position: relative;
+            transition: 0.5s;
+            text-align: center;
+            bottom: -100%;
+            left: 0%;
+            font-family:'Opensans condensed';
+            font-weight: 600;
+            color:white;
+            user-select: none;
+        }
+        .card1:hover
+        {
+            /* opacity: 0.9; */
+            background-color: rgb(48, 46, 46);
+            box-shadow: 0 0 40px black;
+        }
+        .card1:hover .product-card__tag{
+            background-color: rgb(20, 19, 19);
+        }
+        .card1:hover .text
+        {
+            bottom: 10%;
+        }
+        .card1:hover .img
+        {
+            opacity: 2.0;
+            
+        }
+        .ctx
+        {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .ctx img
+        {
+            background-color: #ffffff;
+            padding:2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .product-card__tag 
+        {
+            background-color: rgb(48, 46, 46);
+            padding: 14px;
+            border-radius: 45%;
+            position: absolute;
+            top: 0;
+            left: 1;
+            margin: 1rem;
+            z-index: 1;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="cont">
+        <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/d98b5cde1c2ba5cdb185e5a9ac69f5d8caaba053.jpg" height="260" class="img" alt="image1">
+            <div class="product-card__tag ">NEW</div>
+            <div class="text">
+                <p>BLUE DLC TITANIUM 43MM</p>
+                <p>124000/-</p>
+            </div>
+        </div>
+        <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7e9b9dc9addae521d74df886a2a320db7b7f9364.jpg" height="260" class="img" alt="image1">
+            <div class="product-card__tag ">NEW</div>
+            <div class="text">
+                <p>GOLD DLC TITANIUM 43MM</p>
+                <p>126000/-</p>
+            </div>
+        </div>
+        <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7a5b86ee517f8fd2add9415bcc76b0b4e5e341e9.jpg" height="260" class="img" alt="image1">
+            <div class="product-card__tag ">NEW</div>
+            <div class="text">
+                <p>GREY DLC TITANIUM 43MM</p>
+                <p>128000/-</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

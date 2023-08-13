@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+        @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+        @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+        /* header */
+        body{
+            background-color: black;
+        }
+        .logo{
+            z-index: 1;
+            position: absolute;
+            top: 3%;
+            left: 38%;
+        }
+        /* Search Bar */
+        #wrap {
+            margin: 7px 130px;
+            display: inline-block;
+            position: relative;
+            height: 60px;
+            float: right;
+            padding: 0;
+            position: relative;
+        }
+        #search{
+            color: white;
+        }
+        input[type="text"] {
+            height: 60px;
+            font-size: 20px;
+            display: inline-block;
+            /* font-family: "Lato"; */
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            border: none;
+            outline: none;
+            /* color: #555; */
+            color: white;
+            /* padding: 2px; */
+            padding-right: 60px;
+            width: 0px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            z-index: 3;
+            transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+            cursor: pointer;
+        }
+
+        input[type="text"]:focus:hover {
+            /* border-bottom: 1px solid #BBB; */
+            border-bottom: 1px solid white;
+        }
+
+        input[type="text"]:focus {
+            width: 300px;
+            z-index: 1;
+            /* border-bottom: 1px solid #BBB; */
+            border-bottom: 1px solid white;
+            cursor: text;
+        }
+        input[type="submit"] {
+            height: 67px;
+            width: 63px;
+            display: inline-block;
+            color:red;
+            float: right;
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqXivAtVLUPxgCHZxNMdUvKT2eNqMqWWjK4Q&usqp=CAU") center center no-repeat;
+            background-size: 47px;
+            text-indent: -10000px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            cursor: pointer;
+            /* opacity: 0.7; */
+            cursor: pointer;
+            transition: opacity .4s ease;
+        }
+        #search_submit{
+            opacity: 0.7;
+        }
+        #search_submit:hover{
+            opacity: 1;
+        }
+        /* Search Bar ends*/
+        .sub-header{
+            z-index: 2; 
+            top: 3%; 
+            font-size: 140%; 
+            margin-left: 130px; 
+            cursor: pointer; 
+            /* opacity: 0.7; */
+        }
+        .fa-user-circle{
+            opacity: 0.7;
+        }
+        .fa-heart{
+            opacity: 0.7;
+        }
+        .fa-shopping-bag{
+            opacity: 0.7;
+        }
+        .fa-user-circle:hover{
+            opacity: 1;
+        }
+        .fa-heart:hover{
+            opacity: 1;
+        }
+        .fa-shopping-bag:hover{
+            opacity: 1;
+        }
+        #header2 span{
+            font-size: 23px;
+            margin-right: 50px;
+            padding-bottom: 8px;
+            cursor: pointer;
+        }
+        /* underline animation */
+        .border-button{
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .border-button:after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            width: 0%; /* Change this to whatever width you want to have before hover. */
+            padding-top: 5px; /* This creates some space between the element and the border. */
+            border-bottom: 1px solid rgb(253, 253, 253); /* This creates the border. Replace black with whatever color you want. */
+            transition: .5s; /* This establishes the amount of time in seconds the animation should take from start to finish */
+        }
+
+        #btn1:hover:after {
+            width: 82%; /* This will be the new width of your border when on hover */
+        }
+        #btn2:hover:after {
+            width: 100%;
+        }
+        #btn3:hover:after {
+            width: 35%;
+        }
+        /* underline animation ends */
+        * {box-sizing: border-box;}
+				body {font-family: Verdana, sans-serif;}
+				.mySlides {display: none;}
+				img {vertical-align: middle;}
+
+		 /* Slideshow container */
+        .slideshow-container {
+            max-width: 100%;
+            height: 700px;
+            position: relative;
+            /* margin: auto; */
+		}
+
+	    /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+	    /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+		.active {
+			background-color: #717171;
+		}
+        /* Fading animation */
+		.fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+		}
+
+		@keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+		}
+        .intro{
+            text-align: center;
+            padding: 15% 20% 0% 20%;
+            /* background-color: black; */
+        }
+        .intro>h1{
+            font-size: 73px;
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .intro>p{
+            font-size: 20px;
+        }
+        /* watches grid */
+        .card1 img{
+            margin: 43px 54px 54px 54px;
+        }
+        .cont
+        {
+            display: flex;
+            justify-content: space-around;
+            margin: auto 0px;
+            top: 30px;
+            position: relative;
+            justify-content: center;
+        }
+        .card1
+        {
+            height:400px;
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            transition: 0.5s;
+            border-radius: 4px;
+            opacity: 1;
+            background-color: rgb(20, 19, 19);
+            margin: 10px;
+        }
+        .card1.img{
+            padding-left: 50%;
+        }
+        .cont .text
+        {
+            position: relative;
+            transition: 0.5s;
+            text-align: center;
+            bottom: -100%;
+            left: 0%;
+            font-family:'Opensans condensed';
+            font-weight: 600;
+            color:white;
+            user-select: none;
+        }
+        .card1:hover
+        {
+            opacity: 0.9; 
+            background-color: rgb(48, 46, 46);
+            box-shadow: 0 0 40px black; 
+        }
+        .card1:hover .card_child{
+            background-color: rgb(20, 19, 19);
+        }
+        .card1:hover .text
+        {
+            bottom: 10%;
+        }
+        .card1:hover .img
+        {
+            opacity: 2.0;
+            
+        }
+        .ctx
+        {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .ctx img
+        {
+            background-color: #ffffff;
+            padding:2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .product-card__tag 
+        {
+            font-size: 18px;
+            width: 70px;
+            background-color: rgb(48, 46, 46);
+            padding: 14px;
+            border-radius: 45%;
+            position: absolute;
+            top: 0;
+            left: 1;
+            margin: 1rem;
+            z-index: 1;
+            color: white;
+        }
+        .wishlist i
+        {
+            background-color: rgb(48, 46, 46);
+            padding: 5px 9px 5px 9px;
+            border-radius: 10%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+            z-index: 1;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        /* watches grid */
+        .history {
+            margin-top: 1%;
+            padding: 0 23% 0 23%;
+            position: relative; 
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .history::before {    
+            content: "";
+            background-image: url('https://wallpaperaccess.com/full/1837843.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            filter: brightness(30%);
+        }
+        .history h1{
+            position: relative;
+            color: #ffffff;  
+            font-size: 5rem;
+            line-height: 0.9;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            padding-bottom: 2%;
+        }
+        .history p{
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            font-size: 20px;
+        }
+        #historyButton {
+            margin-top: 20px;
+            padding: 20px 35px 15px 35px;
+            border: rgb(184, 178, 178) solid 1px; 
+            border-radius: 100px; 
+            font-size: 19px; 
+            font-weight: 700; 
+            background-color: rgba(0, 0, 0, 0.562);
+            transition: 0.5s;
+        }
+        #historyButton:hover{
+            background-color: rgba(181, 181, 216, 0.555);
+        }
+        .discover{
+            background-color: white;
+            color: black;
+        }
+        .discover div{
+            display: flex;
+            flex-direction: column;
+            padding: 3%;
+            text-align: center;
+        }
+        .discover div h1{
+            font-size: 3.6rem;
+            font-family: 'Nunito Sans', sans-serif;
+            padding-bottom: 6%;
+        }
+        .discover div p{
+            font-family: 'Raleway', sans-serif;
+            font-size: 22px;
+        }
+        .pictureGrid {
+            margin-top: 5%;
+            background-color: white;
+            font-size: 40px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 600px 600px;
+        }
+        .d1 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 100px;
+            justify-content: center;
+        }
+        .d2 {
+            background-image: url(https://cdn.luxe.digital/media/2020/05/21140614/best-luxury-watch-brands-armani-luxe-digital.jpg);
+            background-size: cover;
+            height: 100%;
+            background-position: center;
+            }
+        .d3 {
+            background-image: url(https://st3.depositphotos.com/1004677/15439/i/600/depositphotos_154390454-stock-photo-beautiful-young-woman-wearing-wrist.jpg);
+            background-size: cover;
+            height: 100%;
+            background-position: center;
+        }
+        .d4 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 100px;
+            justify-content: center;
+        }
+        .pictureGrid h1{
+            font-size: 3.6rem;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        .pictureGrid p{
+            font-family: 'Raleway', sans-serif;
+            font-size: 22px;
+        }
+        .discoverBtn { 
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1em;
+            text-align: center; 
+        }
+        .discoverBtn p>a {
+                border-bottom: 1px solid black; 
+                color: red;
+                line: 1.4px;
+                padding: 0.25em;
+                text-decoration: none;
+            }
+        .discoverBtn .btn {
+            cursor: pointer;
+            font-size:16px;
+            font-weight: 400;
+            line-height: 45px;
+            margin: 0 0 2em;
+            max-width: 160px; 
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%; 
+        }
+        .discoverBtn .btn-1 {
+            font-weight: 100;
+        }
+        .discoverBtn .btn-1 svg {
+            height: 56px;
+            left: 0;
+            position: absolute;
+            top: 0; 
+            width: 100%; 
+        }
+        .discoverBtn .btn rect {
+            fill: none;
+            stroke: black;
+            stroke-width: 2;
+            stroke-dasharray: 422, 0;
+            transition: all 0.35s linear;
+        }
+
+        .discoverBtn .btn-1:hover {
+                    font-weight: 900;
+                    letter-spacing: 1px;
+        }
+        .discoverBtn .btn-1:hover rect {
+                        stroke-width: 5;
+                        stroke-dasharray: 15, 310;
+                        stroke-dashoffset: 48;
+                        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="sub-header d-flex position-absolute text-white">
+            <i class="fa fa-user-circle pr-5"></i>
+            <i class="fa fa-heart pr-5"></i>
+            <i class="fa fa-shopping-bag pr-5"></i>
+        </div>
+        <div class="logo d-flex flex-column" style="margin-left: 4.5%;">
+            <div class="d-flex mb-3">
+                <div class="image-component sc-htpNat enshqJ" width="115.01741365011812" height="77.68415633563879" style="width: 43.017px; height: 77.6842px;">
+                    <div class="sc-bxivhb fPcvdL">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="160%" height="100%" viewBox="5.703999042510986 17.107994079589844 91.47600555419922 61.78400421142578">
+                            <g fill="#ffffff">
+                                <path d="M27.636 47.133h-20.7m20.7 1.233h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm5.186-10.75h-20.7m20.7 1.232h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm0 17.802h-20.7m20.7 1.232h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm33.465 21.01c-2.202 0-4.41-.236-6.561-.701a1.388 1.388 0 0 1 .586-2.713c1.959.424 3.969.639 5.975.639 7.483 0 14.526-2.907 19.831-8.186C91.46 62.615 94.403 55.537 94.403 48c0-7.483-2.907-14.526-8.186-19.831-5.315-5.342-12.393-8.285-19.93-8.285-7.484 0-14.527 2.907-19.832 8.186-5.342 5.316-8.284 12.394-8.284 19.932 0 7.483 2.907 14.526 8.186 19.831.546.538.58 1.442.042 1.988-.538.547-1.39.579-1.936.042l-.078-.079c-5.794-5.823-8.988-13.561-8.988-21.783 0-8.281 3.233-16.059 9.102-21.899 5.829-5.8 13.567-8.994 21.789-8.994 8.281 0 16.058 3.233 21.898 9.102 5.8 5.829 8.994 13.567 8.994 21.788 0 8.281-3.232 16.057-9.102 21.898-5.831 5.801-13.569 8.996-21.791 8.996z"></path>
+                                <path d="M46.713 71.362c-.061 0-.121-.005-.182-.016l-5.348-.95a1.04 1.04 0 1 1 .364-2.049l4.044.718-.27-4.282a1.04 1.04 0 1 1 2.077-.131l.354 5.604a1.04 1.04 0 0 1-1.039 1.106zm19.573-45.469c-12.19 0-22.107 9.917-22.107 22.107s9.918 22.108 22.107 22.108c12.19 0 22.108-9.917 22.108-22.108-.001-12.19-9.918-22.107-22.108-22.107zm2.192 23.813a1.223 1.223 0 0 1-1.714 1.122l-12.971-5.665a1.225 1.225 0 0 1 .98-2.244l11.256 4.916V36.889a1.224 1.224 0 1 1 2.448 0v12.817z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div  class="d-flex flex-column" style="width: 170px; margin-left: -14px;">
+                    <div style="color: white; padding: 3% 0 0 28%; font-family: 'Mate SC', serif;"><h3>ALPHA</h3></div>
+                    <div><h4 style="color: rgba(255, 255, 255, 0.74); font-size: 14px; padding-left: 27.5%; margin-top: -6px;">TIME TO EVOLVE</h4></div>
+                </div>
+            </div>
+            <div class="position-absolute text-white" id="header2" style="width: 200%; z-index: 4; margin-top: 70px; margin-left: -35%;">
+                <div class="row">
+                    <div class="col-sm border-button" id="btn1">WATCHES</div>
+                    <div class="col-sm border-button" id="btn2" style="margin-right: 12px;">OUR&nbsp;WORLD</div>
+                    <div class="col-sm border-button" id="btn3">FAQ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <form action="" autocomplete="off">
+        <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+        </form>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div id="features" class="numbertext" style="z-index: 2"></div>
+            <img src="https://images.unsplash.com/photo-1612771409641-b0478cab8b69?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjB3YXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" style="max-width: 100%; height: 100%; display: block !important;">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="https://images.unsplash.com/photo-1613710774862-d813121e6d44?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjB3YXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" style="padding-bottom: 60px; max-width: 100%; height: auto; margin: 0 auto; display: block !important;">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="https://i2.wp.com/deployant.com/wp-content/uploads/2021/07/tudor_blackbay-bronze-boutique-toycar.jpg?resize=702%2C459&ssl=1" style="max-width: 100%; padding-top: 10%; height: 100%; margin: 0 auto; display: block !important;">
+        </div>
+    </div>
+    <br>
+        
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+    <!-- EXTRA GRID -->
+    <div class="pictureGrid">
+        <div class="d1">
+            <h1>Engineered for performance</h1>
+            <p>We push boundaries, break rules and reinvent the game. Demanding life’s pleasures. Revelling in its freedoms. Embracing the madness. We are the future of Hyper Horology. NO RULES, OUR GAME.</p>
+        </div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4">
+            <h1>To keep you classy</h1>
+            <p>We're obsessed with designing the future, fearless in our determination to challenge the rules of traditional watchmaking. Creativity, radical know-how and innovation is in our blood.</p>
+        </div>
+    </div>
+    <!-- EXTRA GRID -->
+    <div class="d-flex flex-column intro text-white">
+        <h1>ALPHA: THE MOST EXCITING WAY TO EXPERIENCE THE HYPER HOROLOGY</h1>
+        <p style="padding-bottom: 15%;">Alpha has been at the forefront of contemporary Haute Horlogerie since 1995. Its audacious creations, firmly anchored in the 21st century, embody substantial expertise expressed through the finest watchmaking mechanisms combined with powerful and daring designs. Boldness and extravagance are the brand’s signatures, and determination its driving force.</p>
+        <h1>NOVELTIES</h1>
+        <p style="padding: 5%;">Uncover the world of boldness & adrenaline.</p>
+    </div>
+    <div class="col">
+        <div class="row cont">
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7a5b86ee517f8fd2add9415bcc76b0b4e5e341e9.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>GREY DLC TITANIUM 43MM</p>
+                    <p>124000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7e9b9dc9addae521d74df886a2a320db7b7f9364.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>GOLD DLC TITANIUM 43MM</p>
+                    <p>126000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/d98b5cde1c2ba5cdb185e5a9ac69f5d8caaba053.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>BLUE DLC TITANIUM 43MM</p>
+                    <p>128000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-tile-3/a9bdcafb8078d09bd67917b540a160d314913341.jpg" height="270" class="img" alt="image1" style="margin: 30px 0 60px 16px;">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>BLUE DLC TITANIUM 43MM</p>
+                    <p>128000/-</p>
+                </div>
+            </div>
+        </div>
+        <div class="row cont">
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7a5b86ee517f8fd2add9415bcc76b0b4e5e341e9.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>GREY DLC TITANIUM 43MM</p>
+                    <p>124000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/7e9b9dc9addae521d74df886a2a320db7b7f9364.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>GOLD DLC TITANIUM 43MM</p>
+                    <p>126000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/d98b5cde1c2ba5cdb185e5a9ac69f5d8caaba053.jpg" height="260" class="img" alt="image1">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>BLUE DLC TITANIUM 43MM</p>
+                    <p>128000/-</p>
+                </div>
+            </div>
+            <div class="card1"><img src="https://rogerdubuis.rokka.io/product-tile-3/a9bdcafb8078d09bd67917b540a160d314913341.jpg" height="270" class="img" alt="image1" style="margin: 40px 0 60px 16px;">
+                <div class="product-card__tag card_child">NEW</div>
+                <div class="wishlist"><i class="far fa-heart card_child" onclick="wishlisted(this)"></i></div>
+                <div class="text">
+                    <p>BLUE DLC TITANIUM 43MM</p>
+                    <p>128000/-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="history">
+        <h1>ALPHA'S WORLD</h1>
+        <p>Brave, bold and technically sophisticated Swiss watch Manufacture Alpha is governed by an audacious mindset that drives innovation while cultivating profound respect for traditions.</p>
+        <div id="historyButton" class="border-button position-relative text-white">OUR HISTORY</div>
+    </div>
+    <div class="row discover">
+        <div class="col">
+            <h1>FIND YOUR WATCH</h1>
+            <p>Alpha consistently pushes technical boundaries and demonstrates a bold commitement to go where no other watchmakers have gone before. Uncover the world of boldness & adrenaline.  </p>
+            <!-- <div class="border-button">DISCOVER</div> -->
+            <div class="discoverBtn">
+                <a class="btn btn-1">
+                    <svg>
+                        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                    </svg>
+                    DISCOVER
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <h1>FIND YOUR BOUTIQUE</h1>
+            <p>Browse all Alpha boutiques, the most daring manufacturer of fine watches, for huge collections of Swiss luxury watches.</p>
+            <!-- <div class="border-button" style="padding-top: 55px;">DISCOVER</div> -->
+            <div class="discoverBtn" style="padding-top: 55px;">
+                <a class="btn btn-1">
+                    <svg>
+                        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                    </svg>
+                    DISCOVER
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        function wishlisted(currentElement){
+            $(currentElement).attr('class','fas fa-heart card_child');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.rogerdubuis.com/rdu/assets/images/icons.svg?3d9951c28e160b40305694ac47454d1f#shopping-bag">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>ALPHA</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+        @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+        @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+        .gridcontainer1 
+        {
+            background-image: url('https://rogerdubuis.rokka.io/intro-block-fullheight-2/5c01e874b7fc8ab53be914d5793be3ca83850005.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        a:link , a:visited
+        {
+            text-decoration: none;
+            color:white;
+            border-right: rgb(210, 212, 212) solid 1px;
+            padding: 0 16px 0 15px;
+        }
+        a:hover
+        {
+          color:rgba(255, 255, 255, 0.76);
+        }
+        .gridcontainer1 > .item2
+        {
+          text-align: left;
+          font-family:sans-serif;
+          font-size: 12px;
+          
+        }
+
+        .flex-container {
+          display: flex;
+        }
+        .flex-container>div
+        {
+          background-color: rgb(48, 46, 46);
+          text-align: center;
+          padding: 14px ;
+          color: white;
+          margin: 1rem;
+          border-radius: 20px;
+          z-index: 1;
+          left: 1;
+          font-size: small;
+        }
+        .price
+        {
+        color: white;
+        font-size: x-large;
+        font-weight: 600;
+        }
+        .main-carousel {
+          width: 100%;
+          height: 550px;
+        }
+
+      .carousel-cel {
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-height: 550;
+        margin: 0 auto ;
+        padding-right: 2px;
+      }
+
+      /* fade in lazy loaded image */
+      .carousel-cel-image.flickity-lazyloaded,
+      .carousel-cel-image.flickity-lazyerror {
+        opacity: 1;
+      }
+      button{
+          width: 390px;
+          height: 53px;
+          cursor: pointer;
+          margin: 5px;
+          background: none;
+          border: 1px solid #cbd5e0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+      }
+      
+      
+      .cart{
+          background:white;
+          border-radius: 20px;
+          color: black;
+          font-size: 15px;
+          font-weight:600;
+          
+      }
+      .cart:hover{
+        
+        background-color: rgba(255, 255, 255, 0.884);
+        transform:translateY(-1px);
+        transition: transform(0.5s);
+      }
+      .cart i{
+          position: absolute;
+          margin-right: 136px;
+          column-fill: transparent;
+        
+          color: black;
+      }
+      
+      button:focus{
+          outline:none;
+      }
+      .shop
+      {
+        background:black;
+          border-radius: 20px;
+          color:white;
+          font-size: 15px;
+          font-weight:600;
+          
+      }
+      .shop:hover{
+        background-color: rgb(48, 46, 46);
+        transform:translateY(1px);
+        transition: transform(0.5s);
+        
+      }
+      .shop i{
+        position:absolute;
+          margin-right: 250px;
+          column-fill: transparent;
+          color:white;
+        
+      }
+      .try
+      {
+        background:black;
+          border-radius: 20px;
+          color:white;
+          font-size: 15px;
+          font-weight:600;
+          
+      }
+      .try:hover{
+        background-color: rgb(48, 46, 46);
+        transform:translateY(-1px);
+        transition: transform(0.5s);
+      }
+      .try i{
+        position:absolute;
+          margin-right: 170px;
+          column-fill: transparent;
+          color:white;
+      }
+      .gridcontainer2{
+          box-shadow:
+              0 0px 13.8px rgba(0, 0, 0, 0.281),
+              0 0px 33.3px rgba(0, 0, 0, 0.404),
+              0 0px 62.6px rgba(0, 0, 0, 0.5),
+              0 0px 111.7px rgba(0, 0, 0, 0.596),
+              0 0px 208.9px rgba(0, 0, 0, 0.719),
+              0 0px 500px rgba(0, 0, 0, 1);
+              text-align: center;
+      }
+      /* Carousel */
+      .carousel-cell {
+            width: 20%;
+            height: 300px;
+            margin-right: 5%;
+             background: black;
+            border-radius: 5px;
+            counter-increment: carousel-cell;
+        }
+        .carousel-cell:hover{
+            border: rgba(172, 167, 167, 0.644) 3px solid;
+        }
+        /* cell number */
+        .carousel-cell:before {
+            display: block;
+            content: counter(carousel-cell);
+        }
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 22px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            /* overflow: auto; Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+        }
+        /* Add Animation */
+        .modal-content {  
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+        /* Carousel ends */
+      
+      
+    </style>
+</head>
+<body><div class="header">
+  <div class="sub-header d-flex position-absolute text-white">
+      <i class="fa fa-user-circle pr-5"></i>
+      <i class="fa fa-heart pr-5"></i>
+      <i class="fa fa-shopping-bag pr-5"></i>
+  </div>
+  <div class="logo d-flex flex-column" style="margin-left: 4.5%;">
+      <div class="d-flex mb-3">
+          <div class="image-component sc-htpNat enshqJ" width="115.01741365011812" height="77.68415633563879" style="width: 43.017px; height: 77.6842px;">
+              <div class="sc-bxivhb fPcvdL">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="160%" height="100%" viewBox="5.703999042510986 17.107994079589844 91.47600555419922 61.78400421142578">
+                      <g fill="#ffffff">
+                          <path d="M27.636 47.133h-20.7m20.7 1.233h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm5.186-10.75h-20.7m20.7 1.232h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm0 17.802h-20.7m20.7 1.232h-20.7a1.232 1.232 0 1 1 0-2.464h20.7a1.232 1.232 0 1 1 0 2.464zm33.465 21.01c-2.202 0-4.41-.236-6.561-.701a1.388 1.388 0 0 1 .586-2.713c1.959.424 3.969.639 5.975.639 7.483 0 14.526-2.907 19.831-8.186C91.46 62.615 94.403 55.537 94.403 48c0-7.483-2.907-14.526-8.186-19.831-5.315-5.342-12.393-8.285-19.93-8.285-7.484 0-14.527 2.907-19.832 8.186-5.342 5.316-8.284 12.394-8.284 19.932 0 7.483 2.907 14.526 8.186 19.831.546.538.58 1.442.042 1.988-.538.547-1.39.579-1.936.042l-.078-.079c-5.794-5.823-8.988-13.561-8.988-21.783 0-8.281 3.233-16.059 9.102-21.899 5.829-5.8 13.567-8.994 21.789-8.994 8.281 0 16.058 3.233 21.898 9.102 5.8 5.829 8.994 13.567 8.994 21.788 0 8.281-3.232 16.057-9.102 21.898-5.831 5.801-13.569 8.996-21.791 8.996z"></path>
+                          <path d="M46.713 71.362c-.061 0-.121-.005-.182-.016l-5.348-.95a1.04 1.04 0 1 1 .364-2.049l4.044.718-.27-4.282a1.04 1.04 0 1 1 2.077-.131l.354 5.604a1.04 1.04 0 0 1-1.039 1.106zm19.573-45.469c-12.19 0-22.107 9.917-22.107 22.107s9.918 22.108 22.107 22.108c12.19 0 22.108-9.917 22.108-22.108-.001-12.19-9.918-22.107-22.108-22.107zm2.192 23.813a1.223 1.223 0 0 1-1.714 1.122l-12.971-5.665a1.225 1.225 0 0 1 .98-2.244l11.256 4.916V36.889a1.224 1.224 0 1 1 2.448 0v12.817z"></path>
+                      </g>
+                  </svg>
+              </div>
+          </div>
+          <div  class="d-flex flex-column" style="width: 170px; margin-left: -14px;">
+              <div style="color: white; padding: 3% 0 0 28%; font-family: 'Mate SC', serif;"><h3>ALPHA</h3></div>
+              <div><h4 style="color: rgba(255, 255, 255, 0.74); font-size: 14px; padding-left: 27.5%; margin-top: -6px;">TIME TO EVOLVE</h4></div>
+          </div>
+      </div>
+      <div class="position-absolute text-white" id="header2" style="width: 200%; z-index: 4; margin-top: 70px; margin-left: -35%;">
+          <div class="row">
+              <div class="col-sm border-button" id="btn1">WATCHES</div>
+              <div class="col-sm border-button" id="btn2" style="margin-right: 12px;">OUR&nbsp;WORLD</div>
+              <div class="col-sm border-button" id="btn3">FAQ</div>
+          </div>
+      </div>
+  </div>
+</div>
+  
+    <div class="gridcontainer1">
+        <div class="main-carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+            <div class="carousel-cel">
+                <img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/d98b5cde1c2ba5cdb185e5a9ac69f5d8caaba053.jpg"width="380" height="550"alt="">
+            </div>
+            <div class="carousel-cel">
+              <img src="https://rogerdubuis.rokka.io/product-slideshow-3/0af93c0d4e9a54d0cb690af382f336cce793571e.jpg"width="380" height="550" alt="">
+            </div>
+        </div>
+        <div class="item2">
+            <nav id="wow">
+                <a href="">HOME</a> 
+                <a href="">EXCALIBUR</a> 
+                <a href="" style="color:rgba(255, 255, 255, 0.5) ; border-right: none;">EXCALIBUR COBALT BLUE 42MM</a>
+            </nav><br>
+            <div class="flex-container">
+                <div>New</div>
+                <div>88 pcs</div>
+            </div>
+            <h1 style="color: white; font-weight: 600;">EXCALIBUR COBALT BLUE 42MM</h1>
+            <h5 style="color: gray;">Cobalt, Manual-winding, Manual-winding, 42mm</h5><br><br>
+            <div class="price">
+              <span>£</span>&nbsp;<span>125 000</span>
+            </div>
+            <h5 style="color: green;">In stock</h5>
+            <button class="cart" >
+              <span>ADD TO CART</span>
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </button>
+            <br>
+            <button class="shop">
+             <a href="https://rzp.io/l/eZCYPCF1JZ" target="blank" style="border-right: none;"><span >PAY NOW</span></a> 
+              
+            </button>
+            <br>
+            <button class="try">
+              <span>TRY IN BOUTIQUE</span>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </button> 
+            <h5 style="color: rgb(128, 128, 128);">Complimentary Delivery and 14-days Return.
+              <a href="" style="text-decoration: underline; font-weight: 600; border-right: none;">More Information</a></h5>  
+        </div>
+    </div>
+    <div class ="gridcontainer2" style="color: white; padding-top: 10%; background-color: black;">
+      <div class="d-flex flex-column intro text-white">
+        <h2 style="padding: 0 20% 0% 20%">THE SKELETON CALIBRES MANUFACTURED BY ROGER DUBUIS IN GENEVA ARE THE ESSENCE OF THE EXPRESSIVE SINGULARITY OF THE EXCALIBUR COLLECTION. COMPLYING WITH ONE OF THE MOST RESPECTED CERTIFICATIONS OF HAUTE HORLOGERIE, THE POINÇON DE GENÈVE, THE EXCALIBUR WATCHES ARE DESIGNED LIKE CONTEMPORARY WORKS OF ART. EVERY SINGLE COMPONENT BEING FINISHED BY HAND, THE WATCHES ARE SYMBOLS OF GREATNESS. THE WORK OF HYPER-SKILLED CRAFTSMEN IS AT THE FOREFRONT OF EACH WATCH WITH A DIRECT VIEW ON THE CREATIVE MECHANICS MAKING THESE PIECES MORE ALIVE THAN EVER.
+        </h2>
+        <br>
+        <h3><a href="" style="font-family:'Times New Roman', Times, serif; text-decoration: underline; border-right: none;" ;>TECHNICAL DETAILS <span class="glyphicon glyphicon-download"></span></a></h2>
+       
+    </div>
+    <h4 style="padding: 15% 80% 1% 1%">RD508SQ</h4>
+    <h5 style="padding: 3% 20% 0% 5%; text-align: left; font-size: larger;">Skeleton flying tourbillon calibre,
+       the signature of Roger Dubuis
+       highly-skilled watchmakers <br>  
+       Placed at 7 o'clock, the flying tourbillon makes one rotation in 60 seconds  
+       Inspired by the motorsport universe,<br> the calibre includes a power reserve indicator built like a fuel gauge
+     <picture>
+       <img src="https://rogerdubuis.rokka.io/movement-push-lg-1/56939e497bb756fc76b7c9dbd7b418a22974d896.jpg" alt="" height="524px" style="padding: 0% 3% 30% 100%;">
+     </picture> </h5>
+
+    </div>
+    <!-- Carousel -->
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+      <img class="carousel-cell myImg" src="https://www.dmarge.com/wp-content/uploads/2021/05/tudor-black-bay-ceramic-beckham.jpg" onclick="modalThis(this)">
+      <img class="carousel-cell myImg" src="http://techworm.page/wp-content/uploads/2019/07/6-1-3.jpg" onclick="modalThis(this)">
+      <img class="carousel-cell myImg" src="http://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/00/84/00840d97-3922-46e4-b101-07c8f6c6f356/tudor-x-david-beckham-suit.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg" onclick="modalThis(this)">
+      <img class="carousel-cell myImg" src="https://cdn.luxatic.com/wp-content/uploads/2017/06/Tudor-David-Beckham-2.jpg" onclick="modalThis(this)">
+      <img class="carousel-cell myImg" src="https://www.calibremagazine.com/wp-content/uploads/2018/11/DSCF4478_CMYK-copy-680x876.jpg" onclick="modalThis(this)">
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+  </div>
+  
+  <!-- Carousel Ends -->
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script>
+      function modalThis(currentElement){
+          var modal = document.getElementById("myModal");
+          var modalImg = document.getElementById("img01");
+          modal.style.display = "block";
+          modalImg.src = currentElement.src;
+          var span = document.getElementsByClassName("close")[0];
+          span.onclick = function() { 
+              modal.style.display = "none";
+          }
+      }
+  </script>
+    
+    
+</body>
+</html>

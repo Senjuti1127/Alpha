@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+  <link rel="stylesheet" href="https://www.rogerdubuis.com/rdu/assets/images/icons.svg?3d9951c28e160b40305694ac47454d1f#shopping-bag">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>BUY NOW</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); 
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: black;
+      }
+      .gridcontainer1 .carousel-cell img{
+        width: 66%;
+        height: 80%;
+      }
+      .flickity-page-dots {
+        bottom: -42%;
+      }
+        .gridcontainer1 
+        {
+            background-image: url('https://rogerdubuis.rokka.io/intro-block-fullheight-2/5c01e874b7fc8ab53be914d5793be3ca83850005.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        a:link , a:visited
+        {
+            text-decoration: none;
+            color:white;
+            /* border-right: rgb(210, 212, 212) solid 1px; 
+            padding-right: 10px; */
+            /* padding: 0 16px 0 15px; */
+        }
+        #wow i{
+          color: rgb(219, 211, 211);
+          font-size: 13px;
+          padding: 0 2% 0 2%;
+        }
+        a:hover
+        {
+          color:rgba(255, 255, 255, 0.76);
+        }
+        .gridcontainer1 > .item2
+        {
+          text-align: left;
+          font-family: 'Montserrat', sans-serif;
+          font-size: smaller;
+          
+        }
+
+        .flex-container {
+          display: flex;
+        }
+        .flex-container>div
+        {
+          background-color: rgb(48, 46, 46);
+          text-align: center;
+          padding: 14px ;
+          color: white;
+          margin: 1rem;
+          border-radius: 20px;
+          z-index: 1;
+          left: 1;
+          /* font-size: small; */
+        }
+        .price_wishlist{
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+        .price
+        {
+        color: white;
+        font-size: x-large;
+        font-weight: 600;
+        }
+        .wishlist{
+          font-size: 3rem;
+          color: white;
+          padding-left: 28%;
+          cursor: pointer;
+        }
+        .main-carousel {
+          width: 100%;
+          height: 550px;
+        }
+
+      .carousel-cell {
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-height: 550;
+        margin: 0 auto ;
+        padding-right: 2px;
+      }
+
+      /* fade in lazy loaded image */
+      .carousel-cell-image.flickity-lazyloaded,
+      .carousel-cell-image.flickity-lazyerror {
+        opacity: 1;
+      }
+      .item2 > button{
+          width: 69.5%;
+          height: 67px;
+          cursor: pointer;
+          margin: 5px 5px 20px 5px;
+          padding: 4.3% 2% 4.3% 2%;
+          border: 1px solid #cbd5e0;
+          border-radius: 43px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          transition: 0.5s;
+      }
+      .flickity-prev-next-button {
+        top: 67%;
+      }
+      .cart{
+          background:white;
+          /* border-radius: 20px; */
+          color: black;
+          /* font-size: 15px; */
+          font-weight:600;
+          
+      }
+      .cart:hover{
+        background-color: rgba(171, 202, 216, 0.692);
+      }
+      .cart i{
+          position: absolute;
+          margin-right: 172px;
+          column-fill: transparent;
+        
+          color: black;
+      }
+      button:focus{
+          outline:none;
+      }
+      .shop
+      {
+        background:black;
+          /* border-radius: 20px; */
+          color:white;
+          /* font-size: 15px; */
+          font-weight:600;
+          
+      }
+      /* .shop i{
+        position:absolute;
+          margin-right: 250px;
+          column-fill: transparent;
+          color:white;
+        
+      } */
+      .try
+      {
+        background:black;
+        color:white;
+        font-weight:600;
+      }
+      .shop:hover, .try:hover{
+        background-color: rgba(141, 141, 158, 0.548);;
+      }
+      .try i{
+        position:absolute;
+          margin-right: 214px;
+          column-fill: transparent;
+          color:white;
+      }
+      .gridcontainer2{
+          box-shadow:
+              0 0px 13.8px rgba(0, 0, 0, 0.281),
+              0 0px 33.3px rgba(0, 0, 0, 0.404),
+              0 0px 62.6px rgba(0, 0, 0, 0.5),
+              0 0px 111.7px rgba(0, 0, 0, 0.596),
+              0 0px 208.9px rgba(0, 0, 0, 0.719),
+              0 0px 500px rgba(0, 0, 0, 1);
+      }
+      .techDetails a{
+        border-bottom: white 3px solid; 
+        padding-bottom: 4px; 
+        border-right: none; 
+        font-size: 2rem;
+      }
+      .techDetails a:hover{
+        border-color: rgba(255, 255, 255, 0.76);
+      }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer1">
+        <div class="main-carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+            <div class="carousel-cell">
+                <img src="https://rogerdubuis.rokka.io/product-slideshow-lg-3/d98b5cde1c2ba5cdb185e5a9ac69f5d8caaba053.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="https://rogerdubuis.rokka.io/product-slideshow-3/0af93c0d4e9a54d0cb690af382f336cce793571e.jpg" alt="">
+            </div>
+        </div>
+        <div class="item2">
+            <nav id="wow" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif;">
+                <a href="">HOME</a><i class="fas fa-greater-than"></i>
+                <a href="">EXCALIBUR</a><i class="fas fa-greater-than"></i>
+                <a href="" style="color:rgba(255, 255, 255, 0.5) ; border-right: none;">EXCALIBUR COBALT BLUE 42MM</a>
+            </nav>
+            <div class="flex-container" style="font-size: 1.7rem;">
+                <div>New</div>
+                <div>88 pcs</div>
+            </div>
+            <div style="margin: 6% 15% 6% 0;">
+              <h1 style="color: white; font-weight: 600; font-size: 4.4rem; margin-right: 5px;">EXCALIBUR COBALT BLUE 42MM</h1>
+              <h5 style="color: gray; font-size: 1.8rem;">Cobalt, Manual-winding, Manual-winding, 42mm</h5>
+            </div>
+            <div class="price_wishlist">
+              <div class="price">
+                <span>£</span>&nbsp;<span>125 000</span>
+              </div>
+              <div class="wishlist">
+                <i class="far fa-heart card_child" onclick="wishlisted(this)"></i>
+              </div>
+            </div>
+            <h5 style="color: green; margin-bottom: 6%; font-size: 1.8rem;">In stock</h5>
+            <button class="cart">
+              <span>ADD TO CART</span>
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </button>
+            <button class="shop">
+              <a href="https://rzp.io/l/eZCYPCF1JZ" target="blank"><span>BUY NOW</span></a> 
+            </button>
+            <button class="try">
+              <span>TRY IN BOUTIQUE</span>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </button> 
+            <h5 style="color: rgb(128, 128, 128); font-size: 1.8rem;">Complimentary Delivery and 14-days Return.
+              <a href="" style="text-decoration: underline; font-weight: 600; border-right: none;">More Information</a>
+            </h5>  
+        </div>
+    </div>
+    <div class="d-flex flex-column intro text-white" style="margin: 10% 0 10% 0; text-align: center; font-family: 'Montserrat', sans-serif;">
+      <h2 style="padding: 0 23% 2% 23%; font-size: 2.8rem; line-height: 1.3">THE SKELETON CALIBRES MANUFACTURED BY ROGER DUBUIS IN GENEVA ARE THE ESSENCE OF THE EXPRESSIVE SINGULARITY OF THE EXCALIBUR COLLECTION. COMPLYING WITH ONE OF THE MOST RESPECTED CERTIFICATIONS OF HAUTE HORLOGERIE, THE POINÇON DE GENÈVE, THE EXCALIBUR WATCHES ARE DESIGNED LIKE CONTEMPORARY WORKS OF ART. EVERY SINGLE COMPONENT BEING FINISHED BY HAND, THE WATCHES ARE SYMBOLS OF GREATNESS. THE WORK OF HYPER-SKILLED CRAFTSMEN IS AT THE FOREFRONT OF EACH WATCH WITH A DIRECT VIEW ON THE CREATIVE MECHANICS MAKING THESE PIECES MORE ALIVE THAN EVER.</h2>
+      <h3 class="techDetails"><a href="">TECHNICAL DETAILS <span class="glyphicon glyphicon-download"></span></a></h2>
+    </div>
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+      function wishlisted(currentElement){
+            if ($(currentElement).hasClass("cardFar")){
+                $(currentElement).attr('class','fas fa-heart card_child cardFas');
+            }
+            else{
+                $(currentElement).attr('class','far fa-heart card_child cardFar');
+            }
+        }
+    </script>
+</body>
+</html>
